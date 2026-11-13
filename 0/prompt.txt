@@ -1,0 +1,61 @@
+Use the .agents/skills/plan-from-spec/SKILL.md skill on `planning/spec.md` to generate `planning/plan.md`. 
+
+Constraints:
+- Create ONLY `planning/plan.md`.
+- IMPORTANT DO NOT write any application code or test files.
+
+---
+
+<send_user_message_question_reply>
+[{"answer":"open ai","question":"The plan-from-spec skill says, “Where a spec line is unclear, say so in the plan and ask the person; do not guess a rule.” Which provider/model should the live integration support, what ordering should define the “latest processed source” during overlapping runs, and which fields/counting rules should the accuracy score use? I’ll continue drafting the plan and mark unanswered points as implementation gates.","questionItemId":"[\"request_user_input_async\",\"call_3581807871ea4ab7bdcc9bcbc8d8a28a\",0]"}]
+</send_user_message_question_reply>
+
+---
+
+Read `planning/plan.md`, `planning/spec.md`, `docs/requirements.md`, `materials/office-policy.md`, and every file in `materials/requests/`.
+
+Correct `planning/plan.md` until each of these holds:
+1. **Coverage:** Every spec line (`R-01` onward) from `planning/spec.md` appears in `## Coverage` (in `planning/plan.md`) with a step that builds it and a test or check that shows it. Put back any spec line that was left out.
+2. **Test Plan Rows:** The test plan has its own row for each case of `## Verification` (in `docs/requirements.md`):
+   - complete request
+   - missing dates
+   - conflicting details
+   - embedded instructions
+   - provider failure
+   - unchanged rerun
+   - changed source content
+   Followed by dedicated rows for:
+   - a paraphrased request
+   - a refusal or interrupted response
+   - a failed retry after a prior success
+3. **Real Inputs:** Each row's input is a real export in `materials/requests/` (read the actual message content) or the paraphrased message.
+4. **Verbatim Expected Facts:** Each expected fact quotes the exact message words and the policy rule from `materials/office-policy.md` it comes from.
+5. **Named Mock Responses:** Each row's mock response is named: a saved reply under `tests/mock_responses/`, an error, or a cut-off reply. Explicitly note that no test calls the real model, and none needs `API_KEY`.
+6. **TDD Step Order:** The steps put the mock provider first, and each later step names the test written before it.
+
+Do not write any code or tests yet; update `planning/plan.md` only.
+
+---
+
+Read `planning/plan.md`, `planning/spec.md`, `docs/requirements.md`, `materials/office-policy.md`, and every file in `materials/requests/`.
+
+Correct `planning/plan.md` until each of these holds:
+1. **Coverage:** Every spec line (`R-01` onward) from `planning/spec.md` appears in `## Coverage` (in `planning/plan.md`) with a step that builds it and a test or check that shows it. Put back any spec line that was left out.
+2. **Test Plan Rows:** The test plan has its own row for each case of `## Verification` (in `docs/requirements.md`):
+   - complete request
+   - missing dates
+   - conflicting details
+   - embedded instructions
+   - provider failure
+   - unchanged rerun
+   - changed source content
+   Followed by dedicated rows for:
+   - a paraphrased request
+   - a refusal or interrupted response
+   - a failed retry after a prior success
+3. **Real Inputs:** Each row's input is a real export in `materials/requests/` (read the actual message content) or the paraphrased message.
+4. **Verbatim Expected Facts:** Each expected fact quotes the exact message words and the policy rule from `materials/office-policy.md` it comes from.
+5. **Named Mock Responses:** Each row's mock response is named: a saved reply under `tests/mock_responses/`, an error, or a cut-off reply. Explicitly note that no test calls the real model, and none needs `API_KEY`.
+6. **TDD Step Order:** The steps put the mock provider first, and each later step names the test written before it.
+
+Do not write any code or tests yet; update `planning/plan.md` only.
