@@ -1,0 +1,30 @@
+Read `planning/plan.md`
+
+Correct `planning/plan.md` until each of these holds:
+1. **Coverage:** Every spec line (`R-01` onward) from `planning/spec.md` appears in `## Coverage` (in `planning/plan.md`) with a step that builds it and a test or check that shows it. Put back any spec line that was left out.
+2. **Test Plan Rows:** The test plan has its own row for each case of `## Verification` (in `docs/requirements.md`):
+   - complete request
+   - missing dates
+   - conflicting details
+   - embedded instructions
+   - provider failure
+   - unchanged rerun
+   - changed source content
+   Followed by dedicated rows for:
+   - a paraphrased request
+   - a refusal or interrupted response
+   - a failed retry after a prior success
+3. **Real Inputs:** Each row's input is a real export in `materials/requests/` (read the actual message content) or the paraphrased message.
+4. **Verbatim Expected Facts:** Each expected fact quotes the exact message words and the policy rule from `materials/office-policy.md` it comes from.
+5. **Named Mock Responses:** Each row's mock response is named: a saved reply under `tests/mock_responses/`, an error, or a cut-off reply. Explicitly note that no test calls the real model, and none needs `API_KEY`.
+6. **TDD Step Order:** The steps put the mock provider first, and each later step names the test written before it.
+
+Do not write any code or tests yet; update `planning/plan.md` only.
+
+---
+
+git add planning/plan.md
+
+---
+
+git commit -m "Plan: build steps and test plan"
