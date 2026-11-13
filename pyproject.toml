@@ -1,0 +1,9 @@
+[project]
+name = "northstar-access-intake"
+version = "1.0.0"
+description = "Durable CLI for human review of IT access requests"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[project.scripts]
+access-intake = "access_intake.__main__:main"

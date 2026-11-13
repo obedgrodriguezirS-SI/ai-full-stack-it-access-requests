@@ -1,0 +1,56 @@
+test_t01_delayed_reply_waits_without_blocking_another_call (test_mock_provider.MockProviderT01.test_t01_delayed_reply_waits_without_blocking_another_call) ... ERROR
+test_t01_offline_guards_are_active (test_mock_provider.MockProviderT01.test_t01_offline_guards_are_active) ... ERROR
+test_t01_saved_reply_and_call_recording_are_deterministic (test_mock_provider.MockProviderT01.test_t01_saved_reply_and_call_recording_are_deterministic) ... ERROR
+test_t01_selected_error_is_raised_and_recorded (test_mock_provider.MockProviderT01.test_t01_selected_error_is_raised_and_recorded) ... ERROR
+test_a_mock_reply_is_read_with_no_key_and_no_network (test_starter.MockResponse.test_a_mock_reply_is_read_with_no_key_and_no_network) ... ok
+test_each_request_export_has_message_text_and_a_hash (test_starter.SuppliedFiles.test_each_request_export_has_message_text_and_a_hash) ... ok
+test_the_schema_names_the_fields_it_requires (test_starter.SuppliedFiles.test_the_schema_names_the_fields_it_requires) ... ok
+
+======================================================================
+ERROR: test_t01_delayed_reply_waits_without_blocking_another_call (test_mock_provider.MockProviderT01.test_t01_delayed_reply_waits_without_blocking_another_call)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 116, in test_t01_delayed_reply_waits_without_blocking_another_call
+    provider = self.provider(
+               ^^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 86, in provider
+    from access_intake.providers.mock import MockProvider
+ModuleNotFoundError: No module named 'access_intake.providers.mock'
+
+======================================================================
+ERROR: test_t01_offline_guards_are_active (test_mock_provider.MockProviderT01.test_t01_offline_guards_are_active)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 143, in test_t01_offline_guards_are_active
+    provider = self.provider(responses={"IT-001.json": REPLY})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 86, in provider
+    from access_intake.providers.mock import MockProvider
+ModuleNotFoundError: No module named 'access_intake.providers.mock'
+
+======================================================================
+ERROR: test_t01_saved_reply_and_call_recording_are_deterministic (test_mock_provider.MockProviderT01.test_t01_saved_reply_and_call_recording_are_deterministic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 97, in test_t01_saved_reply_and_call_recording_are_deterministic
+    provider = self.provider(responses={"IT-001.json": REPLY})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 86, in provider
+    from access_intake.providers.mock import MockProvider
+ModuleNotFoundError: No module named 'access_intake.providers.mock'
+
+======================================================================
+ERROR: test_t01_selected_error_is_raised_and_recorded (test_mock_provider.MockProviderT01.test_t01_selected_error_is_raised_and_recorded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 108, in test_t01_selected_error_is_raised_and_recorded
+    provider = self.provider(responses={"IT-001.json": failure})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 86, in provider
+    from access_intake.providers.mock import MockProvider
+ModuleNotFoundError: No module named 'access_intake.providers.mock'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.008s
+
+FAILED (errors=4)

@@ -1,0 +1,58 @@
+test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors (test_application.AccuracyTests.test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors) ... ERROR
+test_t02_original_bytes_identity_metadata_full_message (test_application.BoundaryTests.test_t02_original_bytes_identity_metadata_full_message) ... ok
+test_t03_every_schema_constraint (test_application.BoundaryTests.test_t03_every_schema_constraint) ... ok
+test_t04_real_adapter_fake_transport_request_config_key_mapping_redaction (test_application.BoundaryTests.test_t04_real_adapter_fake_transport_request_config_key_mapping_redaction) ... ok
+test_t05_completion_refusal_interruption_malformed_and_quote_gate (test_application.BoundaryTests.test_t05_completion_refusal_interruption_malformed_and_quote_gate) ... ok
+test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy (test_application.CLITests.test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy) ... FAIL
+test_t41_submission_bundle_and_independent_oracles (test_application.CLITests.test_t41_submission_bundle_and_independent_oracles) ... FAIL
+test_invalid_export_is_visible_and_other_work_completes (test_application.PersistenceTests.test_invalid_export_is_visible_and_other_work_completes) ... ok
+test_t21_unchanged_reuse_unique_and_batch_omission (test_application.PersistenceTests.test_t21_unchanged_reuse_unique_and_batch_omission) ... ok
+test_t22_changed_source_independent_documents_and_history (test_application.PersistenceTests.test_t22_changed_source_independent_documents_and_history) ... ok
+test_t24_t25_settings_policy_prompt_provenance_refresh (test_application.PersistenceTests.test_t24_t25_settings_policy_prompt_provenance_refresh) ... ok
+test_t26_to_t30_failures_retry_failed_after_success_and_repair (test_application.PersistenceTests.test_t26_to_t30_failures_retry_failed_after_success_and_repair) ... ok
+test_t31_incremental_visibility_while_slow_request_pending (test_application.PersistenceTests.test_t31_incremental_visibility_while_slow_request_pending) ... ok
+test_t33_overlapping_claims_and_stale_revision_fencing (test_application.PersistenceTests.test_t33_overlapping_claims_and_stale_revision_fencing) ... ok
+test_t34_expired_claim_resume_and_late_worker_cannot_publish (test_application.PersistenceTests.test_t34_expired_claim_resume_and_late_worker_cannot_publish) ... ok
+test_t36_consistent_generation_exports_and_separate_history (test_application.PersistenceTests.test_t36_consistent_generation_exports_and_separate_history) ... ok
+test_t06_to_t20_all_source_facts_and_ordered_routes (test_application.PolicyTests.test_t06_to_t20_all_source_facts_and_ordered_routes) ... ok
+test_t20_precedence_and_every_missing_fact (test_application.PolicyTests.test_t20_precedence_and_every_missing_fact) ... ok
+test_t01_delayed_reply_waits_without_blocking_another_call (test_mock_provider.MockProviderT01.test_t01_delayed_reply_waits_without_blocking_another_call) ... ok
+test_t01_offline_guards_are_active (test_mock_provider.MockProviderT01.test_t01_offline_guards_are_active) ... ok
+test_t01_saved_reply_and_call_recording_are_deterministic (test_mock_provider.MockProviderT01.test_t01_saved_reply_and_call_recording_are_deterministic) ... ok
+test_t01_selected_error_is_raised_and_recorded (test_mock_provider.MockProviderT01.test_t01_selected_error_is_raised_and_recorded) ... ok
+test_a_mock_reply_is_read_with_no_key_and_no_network (test_starter.MockResponse.test_a_mock_reply_is_read_with_no_key_and_no_network) ... ok
+test_each_request_export_has_message_text_and_a_hash (test_starter.SuppliedFiles.test_each_request_export_has_message_text_and_a_hash) ... ok
+test_the_schema_names_the_fields_it_requires (test_starter.SuppliedFiles.test_the_schema_names_the_fields_it_requires) ... ok
+
+======================================================================
+ERROR: test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors (test_application.AccuracyTests.test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 271, in test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors
+    from access_intake.accuracy import compare
+ModuleNotFoundError: No module named 'access_intake.accuracy'
+
+======================================================================
+FAIL: test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy (test_application.CLITests.test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 293, in test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy
+    self.run_cli('intake','materials/requests','--state',state,'--output',out,'--fixtures',FIX)
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 288, in run_cli
+    self.assertEqual(result.returncode,0,result.stderr);return result.stdout
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /usr/bin/python3: No module named access_intake.__main__; 'access_intake' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_t41_submission_bundle_and_independent_oracles (test_application.CLITests.test_t41_submission_bundle_and_independent_oracles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 307, in test_t41_submission_bundle_and_independent_oracles
+    self.assertTrue((ROOT/name).is_file(),name)
+AssertionError: False is not true : pyproject.toml
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.225s
+
+FAILED (failures=2, errors=1)
