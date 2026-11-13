@@ -1,0 +1,26 @@
+Read `planning/spec.md`, `planning/test-run.txt`, and all relevant files in `src/` and `tests/`.
+
+1. Create `planning/validation.md` with one row per requirement line of `planning/spec.md` (`R-01` onward) using this exact Markdown table header:
+
+| Spec line | Requirement | Met or not met | Evidence | Note |
+|---|---|---|---|---|
+
+2. Open and inspect the actual test code, implementation code, and `planning/test-run.txt` for every requirement, and fill each row using these strict rules:
+   - **Spec line & Requirement:** Copy the exact ID and requirement text from `planning/spec.md`.
+   - **Evidence:** Cite concrete, verifiable artifacts a reviewer can open or re-run—specifically the test function name and its line number in `planning/test-run.txt`, the implementation file path and line number(s), or a command and its output.
+   - **Met or not met:** Mark `Met` ONLY if the cited evidence explicitly verifies the entire requirement (a passing test that does not actually assert that specific requirement does NOT count as evidence).
+   - **Note:** If `Not met` (because there is no evidence or only partial evidence), mark `Not met` and state specifically what is missing in the `Note` column. If `Met`, leave `Note` blank or note any relevant caveat.
+
+3. Directly underneath the table, write the exact summary counts:
+   - `Met: <number>`
+   - `Not met: <number>`
+
+Do not modify any source or test files; create `planning/validation.md` only.
+
+---
+
+git add planning/validation.md
+
+---
+
+git commit -m "Validation: each spec line met or not met, with evidence"
