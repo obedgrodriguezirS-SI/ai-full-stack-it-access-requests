@@ -1,0 +1,17 @@
+Read `CHALLENGE.md`, `docs/requirements.md`, `materials/office-policy.md`, `snapshot.schema.json`, `planning/spec.md`, `planning/plan.md`, `planning/validation.md`, and inspect the entire codebase (`src/`, `tests/`, and configuration files).
+
+1. **Gap Analysis:** Compare every single requirement, deliverable, CLI/entry-point behavior, schema field, error-handling rule, and verification scenario in `CHALLENGE.md` (and the supporting docs) against the current implementation and tests. List everything that is missing, incomplete, or `Not met` in `planning/validation.md`.
+2. **Implement all the Missing Pieces (TDD + Mocks):**
+   - For each missing requirement or behavior, write or update the corresponding test first using saved fixtures in `tests/mock_responses/` (never call the real model or read `API_KEY`).
+   - Implement the missing production code until all requirements from `CHALLENGE.md` and `snapshot.schema.json` are completely satisfied.
+3. **Verify & Update Validation:**
+   - Run the full test suite and save the output to `planning/test-run.txt`.
+   - Update `planning/validation.md` with the new verifiable evidence (file paths, line numbers, test names, and command outputs) and updated `Met` / `Not met` counts.
+
+---
+
+git add -A
+
+---
+
+git commit -m "Fixes issuess"
