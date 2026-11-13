@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "error": null,
+  "incomplete_details": null,
+  "output": [
+    {
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"request_id\":\"IT-001\",\"request_date\":\"2026-10-22\",\"kind\":\"new\",\"requester\":\"Maya Chen\",\"team\":\"Analytics\",\"system\":\"Atlas\",\"environment\":\"staging\",\"permission\":\"read\",\"business_purpose\":\"I'm checking the weekly conversion dashboard with the new event definition changes (before next reporting cycle).\",\"start_date\":\"2026-10-23\",\"end_date\":\"2026-11-06\",\"manager\":\"Priya Shah\",\"supporting_quotes\":[\"Maya Chen from Analytics here, with request IT-001 dated 2026-10-22.\",\"Can I get new read access on Atlas in staging from 2026-10-23 to 2026-11-06?\",\"My manager is Priya Shah.\",\"I'm checking the weekly conversion dashboard with the new event definition changes (before next reporting cycle).\"],\"issues\":[]}"
+        }
+      ]
+    }
+  ]
+}
