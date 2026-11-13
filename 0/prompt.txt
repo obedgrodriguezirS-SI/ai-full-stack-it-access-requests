@@ -1,0 +1,53 @@
+Read CHALLENGE.md, docs/requirements.md, materials/office-policy.md, and snapshot.schema.json.
+
+Write planning/spec.md as a markdown table with the columns: ID, Requirement, Source, Check.
+- Include one row per requirement, numbered sequentially from R-01 onward.
+- Requirement: write a single sentence that a test or inspection can verify.
+- Source: name the exact file and section, and quote the exact verbatim words.
+- Check: state how the requirement will be verified (the test, the file to inspect, or the command).
+
+Do not add anything the files do not say. Do not write any code.
+
+---
+
+Read `planning/spec.md`, `CHALLENGE.md`, `docs/requirements.md`, `materials/office-policy.md`, and `snapshot.schema.json`.
+
+Audit and rewrite `planning/spec.md` strictly for the MVP:
+1. **Remove duplicate requirements:** Merge or remove any rows that test or state the same rule twice, then renumber IDs sequentially from `R-01` onward.
+2. **Eliminate generic requirements:** Replace or cut any vague/generic statements (e.g., "the app works properly", "handle errors gracefully", "clean code") so every single `Requirement` is one concrete, atomic, testable sentence tied to a specific behavior, schema field, or policy rule.
+3. **Keep strict MVP scope:** Include ONLY requirements explicitly stated in `CHALLENGE.md`, `docs/requirements.md`, `materials/office-policy.md`, and `snapshot.schema.json`. Remove anything out of scope, extra, or assumed.
+4. **Preserve table structure and exact citations:** Keep the columns `ID | Requirement | Source | Check`, where `Source` names the exact file and section with verbatim quoted words, and `Check` specifies the concrete test, file inspection, or command.
+
+Do not write any code; update `planning/spec.md` only.
+
+---
+
+Identify every place where two readings are possible or where a term is not defined. For each one, look it up in the project files first, and then in the official documentation of any tool, format, or standard it names, and write down what you found.
+
+Append an `## Open questions` section to `planning/spec.md` containing:
+- Each open question (with file, section, and exact quote).
+- What you found in the files or official documentation.
+- What stays open.
+
+Do NOT turn an open question into a requirement row (`R-XX`) Do not write any code.
+
+---
+
+Read `CHALLENGE.md`, `docs/requirements.md`, `materials/office-policy.md`, and `snapshot.schema.json` carefully.
+
+Identify every place where two readings are possible or where a term is not defined. For each one, look it up in the project files first, and then in the official documentation and write down what you found.
+
+Append an `## Open questions` section to `planning/spec.md` containing:
+- Each open question (with file, section, and exact quote).
+- What you found in the files or official documentation.
+- What stays open.
+
+Do NOT turn an open question into a requirement row (`R-XX`) Do not write any code.
+
+---
+
+git add planning/spec.md
+
+---
+
+git commit -m "Spec: the brief as numbered requirements"
