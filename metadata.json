@@ -3,9 +3,10 @@
   "checkpoint_id": "01M7AY8ZXPJGSMF0T5J38AYB3D",
   "strategy": "manual-commit",
   "branch": "final",
-  "checkpoints_count": 1,
+  "checkpoints_count": 5,
   "files_touched": [
-    "planning/plan.md"
+    "planning/plan.md",
+    "planning/test-run.txt"
   ],
   "sessions": [
     {
@@ -14,8 +15,23 @@
       "compact_transcript": "/0/transcript.jsonl",
       "content_hash": "/0/content_hash.txt",
       "prompt": "/0/prompt.txt"
+    },
+    {
+      "metadata": "/1/metadata.json",
+      "transcript": "/1/full.jsonl",
+      "compact_transcript": "/1/transcript.jsonl",
+      "content_hash": "/1/content_hash.txt",
+      "prompt": "/1/prompt.txt"
     }
   ],
+  "token_usage": {
+    "input_tokens": 2986,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 855168,
+    "output_tokens": 556,
+    "api_call_count": 10,
+    "subagent_tokens_complete": true
+  },
   "redaction": {
     "replacements": 8,
     "layers": {

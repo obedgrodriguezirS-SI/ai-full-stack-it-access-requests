@@ -1,0 +1,13 @@
+env -u API_KEY python3 -m unittest discover -s tests
+
+---
+
+env -u API_KEY python3 -m unittest discover -s tests -v > planning/test-run.txt 2>&1
+
+---
+
+git add -A
+
+---
+
+git commit -m "Build the plan's steps, tests first, on mock responses"
