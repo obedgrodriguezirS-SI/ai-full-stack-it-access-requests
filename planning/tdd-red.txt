@@ -1,0 +1,243 @@
+test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors (test_application.AccuracyTests.test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors) ... ERROR
+test_t02_original_bytes_identity_metadata_full_message (test_application.BoundaryTests.test_t02_original_bytes_identity_metadata_full_message) ... ERROR
+test_t03_every_schema_constraint (test_application.BoundaryTests.test_t03_every_schema_constraint) ... ERROR
+test_t04_real_adapter_fake_transport_request_config_key_mapping_redaction (test_application.BoundaryTests.test_t04_real_adapter_fake_transport_request_config_key_mapping_redaction) ... ERROR
+test_t05_completion_refusal_interruption_malformed_and_quote_gate (test_application.BoundaryTests.test_t05_completion_refusal_interruption_malformed_and_quote_gate) ... ERROR
+test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy (test_application.CLITests.test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy) ... FAIL
+test_t41_submission_bundle_and_independent_oracles (test_application.CLITests.test_t41_submission_bundle_and_independent_oracles) ... FAIL
+test_invalid_export_is_visible_and_other_work_completes (test_application.PersistenceTests.test_invalid_export_is_visible_and_other_work_completes) ... ERROR
+test_t21_unchanged_reuse_unique_and_batch_omission (test_application.PersistenceTests.test_t21_unchanged_reuse_unique_and_batch_omission) ... ERROR
+test_t22_changed_source_independent_documents_and_history (test_application.PersistenceTests.test_t22_changed_source_independent_documents_and_history) ... ERROR
+test_t24_t25_settings_policy_prompt_provenance_refresh (test_application.PersistenceTests.test_t24_t25_settings_policy_prompt_provenance_refresh) ... ERROR
+test_t26_to_t30_failures_retry_failed_after_success_and_repair (test_application.PersistenceTests.test_t26_to_t30_failures_retry_failed_after_success_and_repair) ... ERROR
+test_t31_incremental_visibility_while_slow_request_pending (test_application.PersistenceTests.test_t31_incremental_visibility_while_slow_request_pending) ... ERROR
+test_t33_overlapping_claims_and_stale_revision_fencing (test_application.PersistenceTests.test_t33_overlapping_claims_and_stale_revision_fencing) ... ERROR
+test_t34_expired_claim_resume_and_late_worker_cannot_publish (test_application.PersistenceTests.test_t34_expired_claim_resume_and_late_worker_cannot_publish) ... ERROR
+test_t36_consistent_generation_exports_and_separate_history (test_application.PersistenceTests.test_t36_consistent_generation_exports_and_separate_history) ... ERROR
+test_t06_to_t20_all_source_facts_and_ordered_routes (test_application.PolicyTests.test_t06_to_t20_all_source_facts_and_ordered_routes) ... ERROR
+test_t20_precedence_and_every_missing_fact (test_application.PolicyTests.test_t20_precedence_and_every_missing_fact) ... ERROR
+test_t01_delayed_reply_waits_without_blocking_another_call (test_mock_provider.MockProviderT01.test_t01_delayed_reply_waits_without_blocking_another_call) ... ERROR
+test_t01_offline_guards_are_active (test_mock_provider.MockProviderT01.test_t01_offline_guards_are_active) ... ERROR
+test_t01_saved_reply_and_call_recording_are_deterministic (test_mock_provider.MockProviderT01.test_t01_saved_reply_and_call_recording_are_deterministic) ... ERROR
+test_t01_selected_error_is_raised_and_recorded (test_mock_provider.MockProviderT01.test_t01_selected_error_is_raised_and_recorded) ... ERROR
+test_a_mock_reply_is_read_with_no_key_and_no_network (test_starter.MockResponse.test_a_mock_reply_is_read_with_no_key_and_no_network) ... ok
+test_each_request_export_has_message_text_and_a_hash (test_starter.SuppliedFiles.test_each_request_export_has_message_text_and_a_hash) ... ok
+test_the_schema_names_the_fields_it_requires (test_starter.SuppliedFiles.test_the_schema_names_the_fields_it_requires) ... ok
+
+======================================================================
+ERROR: test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors (test_application.AccuracyTests.test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 271, in test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors
+    from access_intake.accuracy import compare
+ModuleNotFoundError: No module named 'access_intake.accuracy'
+
+======================================================================
+ERROR: test_t02_original_bytes_identity_metadata_full_message (test_application.BoundaryTests.test_t02_original_bytes_identity_metadata_full_message)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 49, in test_t02_original_bytes_identity_metadata_full_message
+    from access_intake.validation import read_export
+ModuleNotFoundError: No module named 'access_intake.validation'
+
+======================================================================
+ERROR: test_t03_every_schema_constraint (test_application.BoundaryTests.test_t03_every_schema_constraint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 63, in test_t03_every_schema_constraint
+    from access_intake.validation import validate_schema
+ModuleNotFoundError: No module named 'access_intake.validation'
+
+======================================================================
+ERROR: test_t04_real_adapter_fake_transport_request_config_key_mapping_redaction (test_application.BoundaryTests.test_t04_real_adapter_fake_transport_request_config_key_mapping_redaction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 80, in test_t04_real_adapter_fake_transport_request_config_key_mapping_redaction
+    from access_intake.providers.openai import OpenAIProvider
+ModuleNotFoundError: No module named 'access_intake.providers.openai'
+
+======================================================================
+ERROR: test_t05_completion_refusal_interruption_malformed_and_quote_gate (test_application.BoundaryTests.test_t05_completion_refusal_interruption_malformed_and_quote_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 112, in test_t05_completion_refusal_interruption_malformed_and_quote_gate
+    from access_intake.validation import extract_response
+ModuleNotFoundError: No module named 'access_intake.validation'
+
+======================================================================
+ERROR: test_invalid_export_is_visible_and_other_work_completes (test_application.PersistenceTests.test_invalid_export_is_visible_and_other_work_completes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 204, in test_invalid_export_is_visible_and_other_work_completes
+    engine,p=self.engine();bad=self.base/'bad.json';bad.write_bytes(b'{not valid')
+             ^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 36, in engine
+    from access_intake.engine import Engine, settings_for
+ModuleNotFoundError: No module named 'access_intake.engine'
+
+======================================================================
+ERROR: test_t21_unchanged_reuse_unique_and_batch_omission (test_application.PersistenceTests.test_t21_unchanged_reuse_unique_and_batch_omission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 158, in test_t21_unchanged_reuse_unique_and_batch_omission
+    engine,p=self.engine();engine.enroll([self.path(),self.path('IT-002.json')]);engine.run()
+             ^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 36, in engine
+    from access_intake.engine import Engine, settings_for
+ModuleNotFoundError: No module named 'access_intake.engine'
+
+======================================================================
+ERROR: test_t22_changed_source_independent_documents_and_history (test_application.PersistenceTests.test_t22_changed_source_independent_documents_and_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 163, in test_t22_changed_source_independent_documents_and_history
+    engine,p=self.engine()
+             ^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 36, in engine
+    from access_intake.engine import Engine, settings_for
+ModuleNotFoundError: No module named 'access_intake.engine'
+
+======================================================================
+ERROR: test_t24_t25_settings_policy_prompt_provenance_refresh (test_application.PersistenceTests.test_t24_t25_settings_policy_prompt_provenance_refresh)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 178, in test_t24_t25_settings_policy_prompt_provenance_refresh
+    from access_intake.engine import Engine, settings_for
+ModuleNotFoundError: No module named 'access_intake.engine'
+
+======================================================================
+ERROR: test_t26_to_t30_failures_retry_failed_after_success_and_repair (test_application.PersistenceTests.test_t26_to_t30_failures_retry_failed_after_success_and_repair)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 189, in test_t26_to_t30_failures_retry_failed_after_success_and_repair
+    engine,p=self.engine();engine.enroll([self.path()]);engine.run()
+             ^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 36, in engine
+    from access_intake.engine import Engine, settings_for
+ModuleNotFoundError: No module named 'access_intake.engine'
+
+======================================================================
+ERROR: test_t31_incremental_visibility_while_slow_request_pending (test_application.PersistenceTests.test_t31_incremental_visibility_while_slow_request_pending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 211, in test_t31_incremental_visibility_while_slow_request_pending
+    from access_intake.providers.mock import MockProvider
+ModuleNotFoundError: No module named 'access_intake.providers.mock'
+
+======================================================================
+ERROR: test_t33_overlapping_claims_and_stale_revision_fencing (test_application.PersistenceTests.test_t33_overlapping_claims_and_stale_revision_fencing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 230, in test_t33_overlapping_claims_and_stale_revision_fencing
+    from access_intake.store import Store
+ModuleNotFoundError: No module named 'access_intake.store'
+
+======================================================================
+ERROR: test_t34_expired_claim_resume_and_late_worker_cannot_publish (test_application.PersistenceTests.test_t34_expired_claim_resume_and_late_worker_cannot_publish)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 247, in test_t34_expired_claim_resume_and_late_worker_cannot_publish
+    engine,p=self.engine();engine.enroll([self.path(),self.path('IT-002.json')])
+             ^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 36, in engine
+    from access_intake.engine import Engine, settings_for
+ModuleNotFoundError: No module named 'access_intake.engine'
+
+======================================================================
+ERROR: test_t36_consistent_generation_exports_and_separate_history (test_application.PersistenceTests.test_t36_consistent_generation_exports_and_separate_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 258, in test_t36_consistent_generation_exports_and_separate_history
+    engine,p=self.engine();engine.enroll([self.path(),self.path('IT-010.json')]);engine.run()
+             ^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 36, in engine
+    from access_intake.engine import Engine, settings_for
+ModuleNotFoundError: No module named 'access_intake.engine'
+
+======================================================================
+ERROR: test_t06_to_t20_all_source_facts_and_ordered_routes (test_application.PolicyTests.test_t06_to_t20_all_source_facts_and_ordered_routes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 125, in test_t06_to_t20_all_source_facts_and_ordered_routes
+    engine,provider=self.engine()
+                    ^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 36, in engine
+    from access_intake.engine import Engine, settings_for
+ModuleNotFoundError: No module named 'access_intake.engine'
+
+======================================================================
+ERROR: test_t20_precedence_and_every_missing_fact (test_application.PolicyTests.test_t20_precedence_and_every_missing_fact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 142, in test_t20_precedence_and_every_missing_fact
+    from access_intake.policy import route
+ModuleNotFoundError: No module named 'access_intake.policy'
+
+======================================================================
+ERROR: test_t01_delayed_reply_waits_without_blocking_another_call (test_mock_provider.MockProviderT01.test_t01_delayed_reply_waits_without_blocking_another_call)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 116, in test_t01_delayed_reply_waits_without_blocking_another_call
+    provider = self.provider(
+               ^^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 86, in provider
+    from access_intake.providers.mock import MockProvider
+ModuleNotFoundError: No module named 'access_intake.providers.mock'
+
+======================================================================
+ERROR: test_t01_offline_guards_are_active (test_mock_provider.MockProviderT01.test_t01_offline_guards_are_active)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 143, in test_t01_offline_guards_are_active
+    provider = self.provider(responses={"IT-001.json": REPLY})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 86, in provider
+    from access_intake.providers.mock import MockProvider
+ModuleNotFoundError: No module named 'access_intake.providers.mock'
+
+======================================================================
+ERROR: test_t01_saved_reply_and_call_recording_are_deterministic (test_mock_provider.MockProviderT01.test_t01_saved_reply_and_call_recording_are_deterministic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 97, in test_t01_saved_reply_and_call_recording_are_deterministic
+    provider = self.provider(responses={"IT-001.json": REPLY})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 86, in provider
+    from access_intake.providers.mock import MockProvider
+ModuleNotFoundError: No module named 'access_intake.providers.mock'
+
+======================================================================
+ERROR: test_t01_selected_error_is_raised_and_recorded (test_mock_provider.MockProviderT01.test_t01_selected_error_is_raised_and_recorded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 108, in test_t01_selected_error_is_raised_and_recorded
+    provider = self.provider(responses={"IT-001.json": failure})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_mock_provider.py", line 86, in provider
+    from access_intake.providers.mock import MockProvider
+ModuleNotFoundError: No module named 'access_intake.providers.mock'
+
+======================================================================
+FAIL: test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy (test_application.CLITests.test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 293, in test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy
+    self.run_cli('intake','materials/requests','--state',state,'--output',out,'--fixtures',FIX)
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 288, in run_cli
+    self.assertEqual(result.returncode,0,result.stderr);return result.stdout
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /usr/bin/python3: No module named access_intake.__main__; 'access_intake' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_t41_submission_bundle_and_independent_oracles (test_application.CLITests.test_t41_submission_bundle_and_independent_oracles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 307, in test_t41_submission_bundle_and_independent_oracles
+    self.assertTrue((ROOT/name).is_file(),name)
+AssertionError: False is not true : pyproject.toml
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.050s
+
+FAILED (failures=2, errors=20)

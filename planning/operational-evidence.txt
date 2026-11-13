@@ -1,0 +1,51 @@
+Operating verification — observed locally, mock only; no real API_KEY or live model used.
+Runtime: Python 3.12.3
+$ git branch --show-current
+final
+exit=0
+$ git symbolic-ref --quiet refs/remotes/origin/HEAD
+refs/remotes/origin/main
+exit=0
+$ git log -1 --oneline
+9cec359 Validation: each spec line met or not met, with evidence
+exit=0
+$ git diff --check
+(no output)
+exit=0
+$ entire status
+● Enabled · branch final
+  Agents · Codex
+  Checkpoints sync to: origin
+
+── Active Sessions ─────────────────────────────────────────
+
+Codex (gpt-6.1-sol) · 01a1d60f-b5b0-7ff0-82f9-56bb234412da
+> "Read `CHALLENGE.md`, `docs/requirements.md`, `materials/o..."
+started 15m ago · exited (run 'entire doctor')
+
+Codex (gpt-6.1-sol) · 01a1d586-7de2-7510-b57d-d6f272f26c9a
+> "Read `planning/plan.md`, `planning/spec.md`, `docs/requir..."
+started 2h ago · active 1h ago · tokens 5572.4k · exited (run 'entire doctor')
+! tracking diverged from current HEAD; HEAD links to checkpoint(s) 01M7AYRYP7AFA0TY9Z4YKW0XKD
+
+────────────────────────────────────────────────────────────
+2 sessions
+
+Agents: run `entire agent-help` for machine-readable usage.
+Bundle audit: 21 unique schema-valid records; original source hashes and pinned queue linkage match.
+Configuration audit: all 21 current records match current source/prompt/schema/policy/fixture implementation fingerprints.
+Accuracy: {"matched": 294, "denominator": 294, "routing_matched": 63, "routing_denominator": 63, "failed_or_missing": 0}
+Test command: env -u API_KEY python3 -m unittest discover -s tests -v > planning/test-run.txt 2>&1
+----------------------------------------------------------------------
+Ran 36 tests in 26.717s
+
+OK
+TOML audit: pyproject.toml and pylock.toml parsed successfully; third-party packages=[]
+No final commit, push, manual checkpoint, capture repair or Classroom submission executed.
+Final producer-provenance repair verified: refusals retain actual response model; all 21 current bundle fingerprints rechecked after repair.
+$ /usr/bin/python3 -m access_intake queue --state .state/intake.sqlite
+stdout parsed and summarized: {"records": 21, "pending": 0}
+exit=0
+$ /usr/bin/python3 -m access_intake show IT-001.json --state .state/intake.sqlite
+stdout parsed and summarized: {"document_id": "IT-001.json", "history_attempts": 3}
+exit=0

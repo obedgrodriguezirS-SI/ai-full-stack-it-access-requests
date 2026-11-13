@@ -1,0 +1,4 @@
+lock-version = "1.0"
+created-by = "northstar-access-intake (stdlib-only dependency set)"
+requires-python = ">=3.12,<3.13"
+packages = []

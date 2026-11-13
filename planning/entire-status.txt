@@ -1,0 +1,19 @@
+● Enabled · branch final
+  Agents · Codex
+  Checkpoints sync to: origin
+
+── Active Sessions ─────────────────────────────────────────
+
+Codex (gpt-6.1-sol) · 01a1d60f-b5b0-7ff0-82f9-56bb234412da
+> "Read `CHALLENGE.md`, `docs/requirements.md`, `materials/o..."
+started 15m ago · exited (run 'entire doctor')
+
+Codex (gpt-6.1-sol) · 01a1d586-7de2-7510-b57d-d6f272f26c9a
+> "Read `planning/plan.md`, `planning/spec.md`, `docs/requir..."
+started 2h ago · active 1h ago · tokens 5572.4k · exited (run 'entire doctor')
+! tracking diverged from current HEAD; HEAD links to checkpoint(s) 01M7AYRYP7AFA0TY9Z4YKW0XKD
+
+────────────────────────────────────────────────────────────
+2 sessions
+
+Agents: run `entire agent-help` for machine-readable usage.

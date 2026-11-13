@@ -1,0 +1,44 @@
+test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors (test_application.AccuracyTests.test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors) ... ok
+test_t02_original_bytes_identity_metadata_full_message (test_application.BoundaryTests.test_t02_original_bytes_identity_metadata_full_message) ... ok
+test_t03_every_schema_constraint (test_application.BoundaryTests.test_t03_every_schema_constraint) ... ok
+test_t04_real_adapter_fake_transport_request_config_key_mapping_redaction (test_application.BoundaryTests.test_t04_real_adapter_fake_transport_request_config_key_mapping_redaction) ... ok
+test_t05_completion_refusal_interruption_malformed_and_quote_gate (test_application.BoundaryTests.test_t05_completion_refusal_interruption_malformed_and_quote_gate) ... ok
+test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy (test_application.CLITests.test_t35_t40_documented_cli_intake_queue_show_retry_resume_export_accuracy) ... ok
+test_t41_submission_bundle_and_independent_oracles (test_application.CLITests.test_t41_submission_bundle_and_independent_oracles) ... FAIL
+test_invalid_export_is_visible_and_other_work_completes (test_application.PersistenceTests.test_invalid_export_is_visible_and_other_work_completes) ... ok
+test_t21_unchanged_reuse_unique_and_batch_omission (test_application.PersistenceTests.test_t21_unchanged_reuse_unique_and_batch_omission) ... ok
+test_t22_changed_source_independent_documents_and_history (test_application.PersistenceTests.test_t22_changed_source_independent_documents_and_history) ... ok
+test_t24_t25_settings_policy_prompt_provenance_refresh (test_application.PersistenceTests.test_t24_t25_settings_policy_prompt_provenance_refresh) ... ok
+test_t26_to_t30_failures_retry_failed_after_success_and_repair (test_application.PersistenceTests.test_t26_to_t30_failures_retry_failed_after_success_and_repair) ... ok
+test_t31_incremental_visibility_while_slow_request_pending (test_application.PersistenceTests.test_t31_incremental_visibility_while_slow_request_pending) ... ok
+test_t33_overlapping_claims_and_stale_revision_fencing (test_application.PersistenceTests.test_t33_overlapping_claims_and_stale_revision_fencing) ... ok
+test_t34_expired_claim_resume_and_late_worker_cannot_publish (test_application.PersistenceTests.test_t34_expired_claim_resume_and_late_worker_cannot_publish) ... ok
+test_t36_consistent_generation_exports_and_separate_history (test_application.PersistenceTests.test_t36_consistent_generation_exports_and_separate_history) ... ok
+test_t06_to_t20_all_source_facts_and_ordered_routes (test_application.PolicyTests.test_t06_to_t20_all_source_facts_and_ordered_routes) ... ok
+test_t20_precedence_and_every_missing_fact (test_application.PolicyTests.test_t20_precedence_and_every_missing_fact) ... ok
+test_t01_delayed_reply_waits_without_blocking_another_call (test_mock_provider.MockProviderT01.test_t01_delayed_reply_waits_without_blocking_another_call) ... ok
+test_t01_offline_guards_are_active (test_mock_provider.MockProviderT01.test_t01_offline_guards_are_active) ... ok
+test_t01_saved_reply_and_call_recording_are_deterministic (test_mock_provider.MockProviderT01.test_t01_saved_reply_and_call_recording_are_deterministic) ... ok
+test_t01_selected_error_is_raised_and_recorded (test_mock_provider.MockProviderT01.test_t01_selected_error_is_raised_and_recorded) ... ok
+test_actual_process_kill_resume_preserves_completed_attempt (test_operations.ProcessTests.test_actual_process_kill_resume_preserves_completed_attempt) ... ok
+test_mock_burst_2000_documents_bounded_workers (test_operations.ProcessTests.test_mock_burst_2000_documents_bounded_workers) ... ok
+test_two_operator_processes_one_current_record_and_consistent_exports (test_operations.ProcessTests.test_two_operator_processes_one_current_record_and_consistent_exports) ... ok
+test_http_rate_limits_outages_timeouts_safe_logging_and_producer_model (test_operations.ResponseEdgeTests.test_http_rate_limits_outages_timeouts_safe_logging_and_producer_model) ... ok
+test_metadata_is_not_sent_and_missing_issue_added_from_saved_reply (test_operations.ResponseEdgeTests.test_metadata_is_not_sent_and_missing_issue_added_from_saved_reply) ... ok
+test_strict_json_and_structural_response_fault_matrix (test_operations.ResponseEdgeTests.test_strict_json_and_structural_response_fault_matrix) ... ok
+test_a_mock_reply_is_read_with_no_key_and_no_network (test_starter.MockResponse.test_a_mock_reply_is_read_with_no_key_and_no_network) ... ok
+test_each_request_export_has_message_text_and_a_hash (test_starter.SuppliedFiles.test_each_request_export_has_message_text_and_a_hash) ... ok
+test_the_schema_names_the_fields_it_requires (test_starter.SuppliedFiles.test_the_schema_names_the_fields_it_requires) ... ok
+
+======================================================================
+FAIL: test_t41_submission_bundle_and_independent_oracles (test_application.CLITests.test_t41_submission_bundle_and_independent_oracles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/ai-full-stack-it-access-requests/tests/test_application.py", line 307, in test_t41_submission_bundle_and_independent_oracles
+    self.assertTrue((ROOT/name).is_file(),name)
+AssertionError: False is not true : deliverables/request-evidence.json
+
+----------------------------------------------------------------------
+Ran 31 tests in 23.510s
+
+FAILED (failures=1)

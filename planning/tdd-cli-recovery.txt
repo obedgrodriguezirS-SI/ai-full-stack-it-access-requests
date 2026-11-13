@@ -1,0 +1,7 @@
+test_cli_errors_and_accuracy_mismatch_exit_codes (test_application.CLIRecoveryTests.test_cli_errors_and_accuracy_mismatch_exit_codes) ... ok
+test_saved_refusal_visible_queue_retry_command_and_resume_active_work (test_application.CLIRecoveryTests.test_saved_refusal_visible_queue_retry_command_and_resume_active_work) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.334s
+
+OK
