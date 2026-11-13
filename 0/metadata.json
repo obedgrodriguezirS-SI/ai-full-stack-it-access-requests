@@ -1,0 +1,45 @@
+{
+  "cli_version": "0.13.1",
+  "checkpoint_id": "01M7AY07M04BYN1EWZKQ57AF0D",
+  "session_id": "01a1d586-7de2-7510-b57d-d6f272f26c9a",
+  "strategy": "manual-commit",
+  "created_at": "2026-11-13T17:06:38.927731669Z",
+  "branch": "final",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    "tests/mock_responses/it-001-complete.json",
+    "tests/test_mock_provider.py"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6.1-sol",
+  "turn_id": "6823a397bc73",
+  "checkpoint_transcript_start": 559,
+  "transcript_lines_at_start": 559,
+  "compact_transcript_start": 154,
+  "token_usage": {
+    "input_tokens": 11901,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 1785600,
+    "output_tokens": 26379,
+    "api_call_count": 7,
+    "subagent_tokens_complete": true
+  },
+  "redaction": {
+    "replacements": 8,
+    "layers": {
+      "betterleaks": 0,
+      "connection_string": 0,
+      "credential_key": 0,
+      "credential_value": 0,
+      "credentialed_uri": 0,
+      "entropy": 12,
+      "key_context": 0,
+      "provider_token": 0,
+      "shell_stdin": 0
+    }
+  },
+  "session_metrics": {
+    "turn_count": 7
+  }
+}
