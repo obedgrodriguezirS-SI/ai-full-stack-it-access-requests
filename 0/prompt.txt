@@ -1,0 +1,71 @@
+I need to make adjustments to meet all requirements for the following modules:
+- Reading a return as XML
+- Reading return XML in tested Python
+- Test automation with AI
+
+Before writing or modifying any code, follow these steps strictly and wait for my confirmation at each point:
+
+1. **Model Selection:** Confirm which model we are currently using and whether it is the best choice for this task, or tell me if I should switch models first.
+2. **Read & Locate Configuration:** Read `challenge.md` and inspect the codebase to locate where the `schema` setting and XML input paths are defined.
+3. **Clarify Unclear Values:** Point out any unclear values, ambiguous XML tags, or missing edge-case specifications in `challenge.md` or the data, and ask me how to resolve them before implementing.
+4. **Scope & Test Plan:** Keep the scope strictly limited to reading return XML in modular Python, wiring the located `schema` setting, and writing automated `pytest` tests. Present the test plan first so I can review it for gaps before approving code generation.
+5. **Human Approval Gate:** After implementing and running `pytest`, stop and show me the test results and `git diff`—do NOT commit, push, or overwrite any catalog tables until I give final human approval
+
+
+i need to meet this;
+How you directed the work
+Test automation with AI
+Reading a return as XML
+Reading return XML in tested Python
+
+---
+
+yes use this model
+
+---
+
+what is the step 3
+
+---
+
+everything is n the challenge.md and also in the doc folder take a look becaus ei dont know the answer
+
+---
+
+so create one  and put it in delivarables folder if you want crteat one folder there
+
+---
+
+yes
+
+---
+
+ok
+
+---
+
+ok
+
+---
+
+done?
+
+---
+
+everythi that asked for?
+
+---
+
+commit and push the chabnges
+
+---
+
+all the chages?
+
+---
+
+git status
+
+---
+
+commit all the changes and push them
