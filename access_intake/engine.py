@@ -92,9 +92,9 @@ class Engine:
                 if fixture_hash != settings['fixtures_sha256']:
                     raise ProviderError('recorded fixtures changed; restore them or run intake to refresh settings')
             try:
-                export=decode_export(job['raw'])
+                export=decode_export(job['raw'], job['document_id'])
             except (ValueError,UnicodeError):
-                raise ValueError('invalid UTF-8 JSON export; message string required') from None
+                raise ValueError('invalid export; message string required') from None
             if provider is None:
                 provider=MockProvider(fixtures=settings['fixtures']) if settings['provider']=='mock' else OpenAIProvider(settings)
             reply=provider.extract(job['document_id'],export['message'])

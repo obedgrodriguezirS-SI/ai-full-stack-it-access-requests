@@ -1,9 +1,11 @@
-"""Strict JSON, the supplied schema's constraints, and source evidence checks."""
+"""Export decoding, the supplied schema's constraints, and source evidence checks."""
 from datetime import date
 import hashlib
 import json
 from pathlib import Path
 import re
+
+from access_intake.xml_return import decode_xml_return
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = json.loads((ROOT/'snapshot.schema.json').read_text(encoding='utf-8'))
@@ -22,7 +24,9 @@ def strict_json(raw):
     return json.loads(raw, object_pairs_hook=pairs, parse_constant=constant)
 
 
-def decode_export(raw):
+def decode_export(raw, document_id=''):
+    if Path(document_id).suffix == '.xml':
+        return decode_xml_return(raw)
     value = strict_json(raw.decode('utf-8'))
     if not isinstance(value, dict) or not isinstance(value.get('message'), str):
         raise ValueError('export must contain a message string')
@@ -32,7 +36,7 @@ def decode_export(raw):
 def read_export(path):
     path = Path(path)
     raw = path.read_bytes()
-    export = decode_export(raw)
+    export = decode_export(raw, path.name)
     return dict(document_id=path.name, source_sha256=hashlib.sha256(raw).hexdigest(),
                 message=export['message'], metadata={k:v for k,v in export.items() if k!='message'})
 

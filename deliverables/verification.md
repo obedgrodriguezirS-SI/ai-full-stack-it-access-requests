@@ -5,7 +5,7 @@ Configuration: CPython 3.12.3 / Linux, SQLite local filesystem, four workers, sa
 Run from the repository root:
 
 ```sh
-env -u API_KEY python3 -m unittest discover -s tests -v > planning/test-run.txt 2>&1
+env -u API_KEY PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v > planning/test-run.txt 2>&1
 env -u API_KEY python3 -m access_intake intake materials/requests --provider mock --fixtures tests/mock_responses --state .state/intake.sqlite --output deliverables
 env -u API_KEY python3 -m access_intake intake tests/inputs --provider mock --fixtures tests/mock_responses --state .state/intake.sqlite --output deliverables
 env -u API_KEY python3 -m access_intake queue --state .state/intake.sqlite
@@ -41,7 +41,7 @@ Intended comparisons:
 | `AccuracyTests.test_t38_exact_counts_null_arrays_failures_missing_and_factual_errors` | Independently calculate 294 exact field slots / 63 route slots; one changed permission, a failed record and missing record score 265/294 and report differences; duplicate IDs reject. |
 | `CLITests` | Replay intake/queue/show/retry/resume/export/accuracy commands offline; inspect all required deliverables, source hashes, response labels and independently expected facts. |
 
-Observed repairs: initially no production modules existed and four baseline tests errored (`planning/baseline-test-run.txt`). New application tests failed first (`planning/tdd-red.txt`); `planning/tdd-progress.txt` records the intermediate remaining CLI/accuracy/bundle gaps. Implemented the provider boundary, validation, ordered routing, transactional attempts, leased workers, CLI, comparisons and bundle. `planning/tdd-operations.txt` records the first additional operational checks (existing functionality may already pass); final verification is `planning/test-run.txt`.
+Observed repairs during implementation: added the provider boundary, validation, ordered routing, transactional attempts, leased workers, CLI, comparisons and submission bundle. Intermediate baseline and TDD snapshots were removed during delivery cleanup; current verification is `planning/test-run.txt` and the named automated tests above.
 
 Observed mock comparison: 21 records, 294/294 literal field matches, 63/63 route matches, zero processing failures and no factual-error candidates. The oracle and mock envelopes were authored from the same source catalogue before production code. This verifies deterministic handling/comparison, not independent live language understanding. Deliberately corrupted measured values in the accuracy test prove the comparator reports mismatches. Request evidence is illustrative, built by the real request constructor without calling the provider.
 
@@ -55,6 +55,10 @@ Source-grounding limits: exact quote validation and trusted instructions do not 
 
 Submission requirements remain external: no commit/push or Classroom submission is performed by this implementation task. Entire was inspected and reports enabled with divergent tracking; that alone does not prove a captured submitted-commit association. The facilitator's capture instructions/submission destination and a verified submitted commit are still needed (R-87–R-89). No manual checkpoint or capture setup changes were made.
 
-Additional observed repairs: test-first fixture-drift and report-label checks (`planning/tdd-drift-focused-red.txt`) exposed stale fixture provenance and a hardcoded mock label. Workers now reject changed code/fixtures before calls, and reports derive observation labels from recorded response sources. CLI recovery/error-command checks already passed when added (`planning/tdd-cli-recovery.txt`).
+Additional observed repairs: fixture-drift and report-label checks exposed stale fixture provenance and a hardcoded mock label. Workers now reject changed code/fixtures before calls, and reports derive observation labels from recorded response sources. CLI recovery/error-command behavior is covered by `CLIRecoveryTests`.
 
-A final test-first provenance repair (`planning/tdd-refusal-provenance-red.txt`) moves actual response-model recording before extraction validation, so refusals/interrupted replies retain their actual producer even when the request used a model alias.
+A final provenance repair, covered by `test_refused_provider_response_keeps_actual_model_provenance`, moves actual response-model recording before extraction validation, so refusals/interrupted replies retain their actual producer even when the request used a model alias.
+
+Delivery cleanup: removed local SQLite state, bytecode caches, the export lock, intermediate planning reports and obsolete export generations. The committed `current` generation and its history remain intact. Recreate local state with the documented intake commands; application exports create their lock as needed. Entire session-capture metadata and configuration were preserved.
+
+Observed after cleanup: Ran 36 tests in 29.525s; OK. `PYTHONDONTWRITEBYTECODE=1` suppressed bytecode in the main test process; caches recreated by subprocess checks were removed after the run.

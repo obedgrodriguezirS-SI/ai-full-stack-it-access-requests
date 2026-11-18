@@ -23,7 +23,7 @@ def parser():
         if name in ('show','retry'):
             command.add_argument('document_id')
         if name=='intake':
-            command.add_argument('inputs',type=Path)
+            command.add_argument('inputs',type=Path,help='a JSON or XML export, or a directory of exports')
             command.add_argument('--provider',choices=('mock','openai'),default='mock')
             command.add_argument('--fixtures',type=Path,default=ROOT/'tests/mock_responses')
             command.add_argument('--model',default='gpt-4.1-mini-2025-04-14')
@@ -62,8 +62,12 @@ def main(argv=None):
         if args.command=='intake':
             settings=settings_for(provider=args.provider,model=args.model,fixtures=args.fixtures,policy=args.policy,
                 temperature=args.temperature,max_output_tokens=args.max_output_tokens,timeout=args.timeout)
-            paths=sorted(args.inputs.glob('*.json')) if args.inputs.is_dir() else [args.inputs]
-            if not paths:raise ValueError('input directory contains no JSON exports')
+            if args.inputs.is_dir():
+                paths = sorted([*args.inputs.glob('*.json'), *args.inputs.glob('*.xml')])
+                if not paths:
+                    raise ValueError('input directory contains no JSON or XML exports')
+            else:
+                paths = [args.inputs]
             engine=Engine(store,settings=settings)
             engine.enroll(paths)
         if args.command=='retry':engine.retry(args.document_id)
