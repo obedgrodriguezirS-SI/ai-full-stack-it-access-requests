@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<return>
+  <export_version>1.0</export_version>
+  <exported_at>2026-10-22T16:00:00Z</exported_at>
+  <source_channel>email</source_channel>
+  <subject>Dashboard event checks</subject>
+  <message>Maya Chen from Analytics here, with request IT-001 dated 2026-10-22. Can I get new read access on Atlas in staging from 2026-10-23 to 2026-11-06? My manager is Priya Shah. I'm checking the weekly conversion dashboard with the new event definition changes (before next reporting cycle). The sample records are already loaded, and I need to check the totals against our spreadsheet. Once I'm done with checking, I'll be sending out any discrepancies to the dashboard owner.</message>
+</return>

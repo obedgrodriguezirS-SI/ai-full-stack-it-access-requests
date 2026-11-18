@@ -175,6 +175,24 @@ These are prospective CLI forms for implementation and T-35/T-40, not commands e
 - Retry: `env -u API_KEY python3 -m access_intake retry <document-id> --provider mock --fixtures tests/mock_responses --state <state-path> --output <output-directory>`; selection of the recorded source/settings and success-after-error behavior are G5.
 - Accuracy: `env -u API_KEY python3 -m access_intake accuracy --expected <expected-data-path> --actual <extractions-path> --output <accuracy-report-path>`; comparison and denominator semantics are G4.
 
+### XML return extension for review
+
+Use Python 3.12 and the existing `intake` CLI. The sample at `deliverables/xml/IT-001.xml` defines one UTF-8 `<return>` per file. Require one nonblank `<message>` and allow the four metadata tags from the sample, each at most once. Accept plain text, preserve decoded message whitespace, and reject malformed XML, namespaces, unknown or repeated tags, attributes, and nested elements. Use `snapshot.schema.json` for the JSON extraction produced from either input format. Run `env -u API_KEY python3 -m pytest -q` in an isolated environment with pytest installed. Use saved mock responses and temporary state and output paths.
+
+Write and run the tests for each step before implementing it.
+
+1. **Read the XML fixture in a dedicated Python module.** Write XML-01 and XML-02 first. The decoded values and the error cases follow the XML contract above. This extends the message-source convention in R-04.
+2. **Wire XML through intake and the existing schema validation.** Write XML-03 and XML-04 first. Accept an XML file or a directory containing JSON and XML files. Preserve the input filename and the hash of its original bytes, and use the existing extraction validation and review path. This extends R-05–R-07 and exercises R-28 and R-67.
+
+| Case | Input | Mock response | Expected facts | Source of the expected facts |
+|---|---|---|---|---|
+| XML-01 | `deliverables/xml/IT-001.xml` and a minimal XML document containing escaped text and surrounding message whitespace | None | The sample decodes to the same five field values as its source export. The minimal document decodes the escaped text, preserves message whitespace, and accepts absent metadata. | `materials/requests/IT-001.json` and the XML contract above. |
+| XML-02 | Malformed XML, an incorrect or namespaced root, unknown or repeated tags, attributes, nested elements, and a missing, empty or whitespace-only message | None | Every case raises a controlled parse or validation error. | XML contract above. |
+| XML-03 | The XML fixture as a single-file input and in a mixed directory with `IT-001.json` and a malformed XML file | Saved IT-001 completed response, keyed to both valid filenames in temporary fixtures | Each valid file produces its own record and original-byte SHA-256. The XML extraction has request ID `IT-001` and routes to `review`, `System Owner`, `review-request`. The malformed file produces a per-document validation error without preventing the valid files from completing. | IT-001 explicitly asks for “new read access on Atlas in staging”. Office policy review rule 5 and the existing per-document failure rule supply the expected routes. |
+| XML-04 | Valid XML input with a completed mock reply altered to omit a required extraction key | Saved IT-001 completed response with `request_id` removed from the extracted object | Schema validation rejects the output and intake records a validation error with a null extraction. The existing provider request test checks that the submitted schema equals `snapshot.schema.json`. | `snapshot.schema.json` requires `request_id`. `docs/requirements.md` requires validating the response before using its data. |
+
+Run the full suite after the focused tests. Save the observed test results and show the task diff at the final approval gate. The XML contract is an extension requested in this session. The existing challenge coverage follows below.
+
 ## Coverage
 
 This maps all 89 R-lines once. Planned coverage is not a claim that a requirement is met: no tests or implementation were written or run here. Gate annotations identify unresolved dependencies. Tests have one introduction step in the Test plan; this table may cite that evidence for several requirements without assigning it to multiple steps. S3/S4 share implementation responsibility for extracting versus routing facts, while the listed checks distinguish their roles.
