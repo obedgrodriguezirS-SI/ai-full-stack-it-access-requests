@@ -1,0 +1,10 @@
+Read `CHALLENGE.md`, `docs/requirements.md`, and `.gitignore`. Inspect the entire workspace (`git status --ignored`, `git ls-files`, and all untracked files).
+
+1. **Identify Extraneous Files:** List every file and directory in the workspace that is NOT part of the original repository structure and is NOT required or expected by `CHALLENGE.md` (i.e., outside the required source code, `tests/`, `tests/mock_responses/`, and the required planning artifacts `planning/spec.md`, `planning/plan.md`, `planning/validation.md`, and `planning/test-run.txt`).
+2. **Safe Cleanup:**
+   - Remove any stray runtime outputs, temporary test snapshots, scratch scripts, duplicate docs, or unrequested files that should not be delivered.
+   - Ensure `.gitignore` covers local cache/build artifacts (`__pycache__/`, `.pytest_cache/`, `.venv/`, `node_modules/`, `.DS_Store`, `.env`, etc.) and remove any tracked cache/junk files from git if present (`git rm --cached` where appropriate).
+   - **Never delete** `CHALLENGE.md`, `docs/`, `materials/`, `snapshot.schema.json`, required source/test files, `tests/mock_responses/`, or `planning/{spec,plan,validation,test-run}.{md,txt}`.
+3. **Final Verification:**
+   - Run the full test suite one last time to confirm nothing broke after cleanup, and save/confirm `planning/test-run.txt`.
+   - Show the final `git status` and list every file you deleted or modified.
