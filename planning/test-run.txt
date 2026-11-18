@@ -36,6 +36,6 @@ test_each_request_export_has_message_text_and_a_hash (test_starter.SuppliedFiles
 test_the_schema_names_the_fields_it_requires (test_starter.SuppliedFiles.test_the_schema_names_the_fields_it_requires) ... ok
 
 ----------------------------------------------------------------------
-Ran 36 tests in 26.717s
+Ran 36 tests in 29.525s
 
 OK
